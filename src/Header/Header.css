@@ -1,0 +1,21 @@
+.header_article-main {
+  width: 100%;
+  background: #1d2731;
+  height: 14vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+.main-round-container {
+  width: 150px;
+  height: 150px;
+  background: #d9b310;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.header_article-h1 {
+	font-size: 32px;
+	font-family: 'Raleway', ;
+	color: #ffffff;
+}

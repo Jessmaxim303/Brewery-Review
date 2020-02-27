@@ -1,0 +1,15 @@
+* {
+  /*border: 1px solid red;*/
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  text-align: center;
+}
+
+.main_body-area {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
