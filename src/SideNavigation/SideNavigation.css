@@ -1,0 +1,19 @@
+.navigation_article-main {
+	width: 25%;
+	height: 100%;
+	background: #0b3c5d;
+}
+
+.navigation {
+	border: none;
+	background: #0b3c5d;
+	color: #ffffff;
+	font-size: 24px;
+	width: 100%;
+	height: 60px;
+	margin: 10px 0;
+}
+
+.navigation:hover {
+	background: #1d2731;
+}
