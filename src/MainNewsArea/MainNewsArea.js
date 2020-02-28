@@ -6,7 +6,7 @@ import { NewsArticle } from '../NewsArticle/NewsArticle.js';
 
 // console.log(props)
 const MainNewsArea = (news) => {
-  console.log(news)
+  // console.log(news[""0""].title.name)
     return (
       <article className="news_main-body">
         <NewsArticle />
