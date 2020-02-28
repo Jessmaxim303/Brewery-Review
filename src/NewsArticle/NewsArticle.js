@@ -1,14 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './NewsArticle.css';
 
-export class NewsArticle extends Component {
-	render() {
+export const NewsArticle = ({title, id}) => {
 		return (
-      <article className="newsarticle_article-main">
+      <article className="newsarticle_article-main" key={id}>
         <img className='newsarticle-img' />
-        <h1 className='newsarticle-h1'>'News article'</h1>
-        <p className='newsarticle-p'>para</p>
+        <h1 className='newsarticle-h1'>Nasa finds other world near sun{title}</h1>
+        <p className='newsarticle-p'>Main text block area</p>
       </article>
 			)
 	}
-}
+

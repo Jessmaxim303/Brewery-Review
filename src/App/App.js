@@ -4,7 +4,7 @@ import { getNews } from '../actions';
 import { connect } from 'react-redux';
 import { Header } from '../Header/Header.js';
 import { SideNavigation } from '../SideNavigation/SideNavigation.js';
-import { MainNewsArea } from '../MainNewsArea/MainNewsArea.js';
+import MainNewsArea from '../MainNewsArea/MainNewsArea.js';
 import { fetchNewsApi } from '../apiCalls/apiCalls.js';
 
 export class App extends Component {
@@ -23,7 +23,6 @@ export class App extends Component {
       this.props.getNews(data)
     })
     // .then(data => this.setState( data ))
-    
   }
 
   render() {
@@ -40,7 +39,7 @@ export class App extends Component {
 }
 
 export const mapStateToProps = state => ({
-  today: state
+  title: state.title
 })
 
 export const mapDispatchToProps = dispatch => ({
