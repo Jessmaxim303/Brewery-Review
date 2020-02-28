@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-
+import { getNews } from '../actions';
+import { connect } from 'react-redux';
 import { Header } from '../Header/Header.js';
 import { SideNavigation } from '../SideNavigation/SideNavigation.js';
 import { MainNewsArea } from '../MainNewsArea/MainNewsArea.js';
@@ -17,9 +18,13 @@ export class App extends Component {
   }
 
   loadMovies() {
-      fetchNewsApi()
-      .then(data => console.log(data))
-    }
+    fetchNewsApi()
+    .then(data => {
+      this.props.getNews(data)
+    })
+    // .then(data => this.setState( data ))
+    
+  }
 
   render() {
   return (
@@ -34,5 +39,13 @@ export class App extends Component {
 }
 }
 
-export default App;
+export const mapStateToProps = state => ({
+  today: state
+})
 
+export const mapDispatchToProps = dispatch => ({
+  getNews: (today) => dispatch( getNews(today) )
+
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
