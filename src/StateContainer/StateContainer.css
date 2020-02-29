@@ -1,0 +1,45 @@
+.state_section-left {
+  width: 50%;
+  background: #328cc1;
+}
+
+.state_section-right {
+  width: 50%;
+  background: #0b3c5d;
+}
+
+.state_section-main {
+	height: 100vh;
+	display: flex;
+	flex-direction: row;
+}
+
+.state_upper-title {
+	font-size: 2.5vw;
+	color: #0b3c5d;
+}
+
+.state_upper-subtitle {
+	font-size: 1vw;
+	color: #0b3c5d;
+}
+
+.state_section-letters {
+	margin-top: 17%;
+	font-size: 26vw;
+	color: #f5f5f5;
+}
+
+.state_section-subletter {
+	font-size: 5vw;
+	color: #f5f5f5;
+}
+
+.state_button {
+	width: 90px;
+	height: 30px;
+	background: #f5f5f5;
+	border-radius: 8px;
+	margin: 8px;
+}
+

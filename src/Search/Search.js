@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { getNews } from '../actions';
 import './Search.css';
 
+import { Link } from "react-router-dom";
 
 export class SearchForm extends Component {
 	constructor(props) {
@@ -13,22 +14,16 @@ export class SearchForm extends Component {
     }
   }
 
-  // componentDidMount() {
-  //   fetch('https://chroniclingamerica.loc.gov/search/titles/results/?terms=colorado&format=json&page=5')
-  //   .then(res => res.json())
-  //   .then(data => this.setState({local: data}))
-  // }
-
   componentDidMount() {
     Promise.all([this.loadStateNews()])
   }
 
   loadStateNews() {
-    fetchStateNewsApi(this.state.area)
-    .then(info => console.log('info', info.totalItems))
-    // .then(data => {
-    //   this.props.getNews(data)
-    // })
+    fetchStateNewsApi('area', this.state.area)
+    .then(data => {
+    	console.log(data)
+      this.props.getNews(data)
+    })
     // .then(data => this.setState( data ))
   }
 
@@ -57,7 +52,11 @@ export class SearchForm extends Component {
     	      name="name"
             onChange={this.handleChange}
     	    />
-    	    <button className="search_button" onClick={() => this.loadStateNews()}>Find!</button>
+          <Link to={{
+              pathname: `/state`
+            }}>
+    	      <button className="search_button" onClick={() => this.loadStateNews()}>Find!</button>
+          </Link>
         </section>
       </form>
 			)
@@ -66,7 +65,7 @@ export class SearchForm extends Component {
 }
 
 export const mapStateToProps = state => ({
-  stateinfo: state
+  stateRecords: state.totalItems
 })
 
 export const mapDispatchToProps = dispatch => ({
