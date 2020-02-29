@@ -30,21 +30,22 @@ export class App extends Component {
     <div className="App">
       <Header />
       <div className="main_body-area">
-        <SideNavigation />
-        <MainNewsArea />
+        <Search />
+        // <SideNavigation />
+        // <MainNewsArea />
       </div>
     </div>
   );
 }
 }
 
-export const mapStateToProps = state => ({
-  title: state.title
-})
+// export const mapStateToProps = state => ({
+//   title: state.title
+// })
 
 export const mapDispatchToProps = dispatch => ({
   getNews: (today) => dispatch( getNews(today) )
 
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(null, mapDispatchToProps)(App);
