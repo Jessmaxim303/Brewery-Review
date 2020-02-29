@@ -4,6 +4,5 @@ export const fetchNewsApi = async () => {
 	  	if(!res.ok) {
 	  		throw Error('Failed to retrieve News')
 	  	}
-	  	console.log(console.log(res))
 	  	return res.json()})
 }
