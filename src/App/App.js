@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { Header } from '../Header/Header.js';
 import { SideNavigation } from '../SideNavigation/SideNavigation.js';
 import MainNewsArea from '../MainNewsArea/MainNewsArea.js';
-import { fetchNewsApi, fetchAllNewsApi } from '../apiCalls/apiCalls.js';
+import { fetchStateNewsApi } from '../apiCalls/apiCalls.js';
 
 export class App extends Component {
   constructor() {
@@ -18,7 +18,7 @@ export class App extends Component {
   }
 
   loadAllMovies() {
-    fetchAllNewsApi()
+    fetchStateNewsApi()
     .then(data => {
       this.props.getNews(data)
     })
@@ -33,17 +33,16 @@ export class App extends Component {
         <MainNewsArea />
       </div>
     </div>
-  );
+  )
 }
 }
 
-// export const mapStateToProps = state => ({
-//   title: state.title
-// })
+export const mapStateToProps = state => ({
+  title: state.title
+})
 
 export const mapDispatchToProps = dispatch => ({
   getNews: (today) => dispatch( getNews(today) )
-
 })
 
 export default connect(null, mapDispatchToProps)(App);
