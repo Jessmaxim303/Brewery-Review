@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { Header } from '../Header/Header.js';
 import { SideNavigation } from '../SideNavigation/SideNavigation.js';
 import MainNewsArea from '../MainNewsArea/MainNewsArea.js';
-import { fetchNewsApi } from '../apiCalls/apiCalls.js';
+import { fetchNewsApi, fetchAllNewsApi } from '../apiCalls/apiCalls.js';
 
 export class App extends Component {
   constructor() {
@@ -14,11 +14,11 @@ export class App extends Component {
   }
 
   componentDidMount() {
-    Promise.all([this.loadMovies()])
+    Promise.all([this.loadAllMovies()])
   }
 
-  loadMovies() {
-    fetchNewsApi()
+  loadAllMovies() {
+    fetchAllNewsApi()
     .then(data => {
       this.props.getNews(data)
     })
@@ -30,9 +30,7 @@ export class App extends Component {
     <div className="App">
       <Header />
       <div className="main_body-area">
-        <Search />
-        // <SideNavigation />
-        // <MainNewsArea />
+        <MainNewsArea />
       </div>
     </div>
   );
