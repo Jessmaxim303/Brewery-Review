@@ -3,3 +3,7 @@ export const getNews = news => ({
   news
 });
 
+export const localNews = local => ({
+  type: 'LOCAL_NEWS',
+  local
+});
