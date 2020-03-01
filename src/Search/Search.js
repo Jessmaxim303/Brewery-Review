@@ -21,7 +21,6 @@ export class SearchForm extends Component {
   loadStateNews() {
     fetchStateNewsApi('area', this.state.area)
     .then(data => {
-    	console.log(data)
       this.props.getNews(data)
     })
     // .then(data => this.setState( data ))
@@ -66,7 +65,7 @@ export class SearchForm extends Component {
 
 export const mapStateToProps = state => {
   return (
-  stateRecords: state.totalItems
+  breweries: state
   )
 }
 
