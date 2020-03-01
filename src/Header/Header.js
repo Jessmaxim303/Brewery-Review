@@ -6,11 +6,11 @@ export const Header = () => {
 
     return (
       <article className="header_article-main">
-        <h1 className="header_article-h1">Library</h1>
+        <h1 className="header_article-h1">Brew</h1>
         <div className="main-round-container">
-          <h1>of</h1>
+          <h1>X</h1>
         </div>
-        <h1 className="header_article-h1">Congress</h1>
+        <h1 className="header_article-h1">Crawlers</h1>
       </article>
     )
 
