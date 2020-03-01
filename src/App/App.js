@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { getNews } from '../actions';
 import { connect } from 'react-redux';
 import { Header } from '../Header/Header.js';
-import { StateContainer } from '../StateContainer/StateContainer.js';
+import StateContainer from '../StateContainer/StateContainer.js';
 import MainNewsArea from '../MainNewsArea/MainNewsArea.js';
 import { Link } from "react-router-dom";
 

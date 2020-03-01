@@ -55,7 +55,7 @@ export class SearchForm extends Component {
           <Link to={{
               pathname: `/state`
             }}>
-    	      <button className="search_button" onClick={() => this.loadStateNews()}>Find!</button>
+    	        <button className="search_button" onClick={() => this.loadStateNews()}>Find!</button>
           </Link>
         </section>
       </form>
@@ -64,9 +64,11 @@ export class SearchForm extends Component {
 
 }
 
-export const mapStateToProps = state => ({
+export const mapStateToProps = state => {
+  return (
   stateRecords: state.totalItems
-})
+  )
+}
 
 export const mapDispatchToProps = dispatch => ({
   getNews: (area) => dispatch( getNews(area) )
