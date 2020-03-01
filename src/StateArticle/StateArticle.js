@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './StateArticle.css';
 
-export const StateArticle = () => {
+export const StateArticle = ({title}) => {
 	return (
     <section className="state_company-container">
       <article className="state_company-icon">Ma</article>
       <article className="state_company-body">
         <section className="state_body-upper">
-          <h3 className="state_upper-title">COLORADO TIMES</h3>
+          <h3 className="state_upper-title">{title}</h3>
           <h3 className="state_upper-subtitle">Issues: 8</h3>
         </section>
         <section className="state_body-lower">
