@@ -1,0 +1,40 @@
+.brewery_company-page {
+	display: flex;
+	flex-direction: row;
+	height: 100vh;
+}
+
+.company_form-left {
+	width: 50%;
+	height: 100%;
+	background: #328cc1;
+}
+
+.company_form-right {
+	width: 50%;
+	height: 100%;
+	background: #0b3c5d;
+}
+
+.brewery_company-textarea {
+	margin-top: 15%;
+}
+
+.company_textarea-container {
+  border-radius: 8px;
+}
+
+.company_button-container {
+	display: flex;
+	flex-direction: row;
+	height: 5vh;
+	width: 100%;
+	background: red;
+}
+
+.company_button-submit {
+	height: 40px;
+	width: 140px;
+	background: #f5f5f5;
+	border-radius: 8px;
+}

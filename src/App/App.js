@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import { Header } from '../Header/Header.js';
 import StateContainer from '../StateContainer/StateContainer.js';
 import MainNewsArea from '../MainNewsArea/MainNewsArea.js';
+import BackArticle from '../BackArticle/BackArticle.js';
 import { Link } from "react-router-dom";
 
 export class App extends Component {
@@ -22,6 +23,7 @@ export class App extends Component {
             <Switch>
               <Route exact path='/' render={() => <MainNewsArea />} />
               <Route exact path='/state' render={() => <StateContainer />} />
+              <Route exact path='/company' render={() => <BackArticle />} />
             </Switch>
         </div>
       </Router>
