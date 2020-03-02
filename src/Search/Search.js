@@ -19,7 +19,7 @@ export class SearchForm extends Component {
   }
 
   loadStateNews() {
-    fetchStateNewsApi('area', this.state.area)
+    fetchStateNewsApi(this.state.area)
     .then(data => {
       this.props.getNews(data)
     })

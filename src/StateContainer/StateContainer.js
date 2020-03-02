@@ -9,7 +9,7 @@ export class StateContainer extends Component {
   render() {
 
     let stateArticles = this.props.breweries.map(article => {
-      console.log(article)
+      // console.log(article)
       return < StateArticle 
         key={article.id}
         name={article.name}

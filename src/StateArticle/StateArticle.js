@@ -3,8 +3,9 @@ import './StateArticle.css';
 import { Link } from "react-router-dom";
 
 export const StateArticle = ({id, name, type, city, state, website}) => {
+
 	return (
-    <section id={id}className="brewery_company-container">
+    <section className="brewery_company-container">
       <article className="state_company-icon">{state.substring(0,2)}</article>
       <article className="brewery_company-card">
         <section className="brewery_card-header">
@@ -20,10 +21,11 @@ export const StateArticle = ({id, name, type, city, state, website}) => {
         <section className="state_body-lower">
           <a className="website_button" href={website}>Website</a>
 					<Link to={{
-              pathname: `/company`
-            }}>
-							<button className="state_favorite-button state_button">Comment</button>
+              pathname: `/company`,
+            }} >
+							<button id={id} className="state_favorite-button state_button">Comment</button>
           </Link>
+          <button className="state_favorite-button state_button">Favorite</button>
         </section>
       </article>
     </section>
