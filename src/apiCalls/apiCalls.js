@@ -1,4 +1,4 @@
-export const fetchStateNewsApi = async () => {
+export const fetchStateNewsApi = async (state) => {
   return await fetch('https://api.openbrewerydb.org/breweries')
   .then(res => {
     if(!res.ok) {

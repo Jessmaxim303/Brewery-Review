@@ -21,7 +21,7 @@ export class StateContainer extends Component {
     })
     
     return (
-      console.log('State Constainer', this.props),
+      console.log('stateArticles', this.props.breweries),
       <section className="state_section-main">
         <section className="state_section-left">
          <h1 className="state_section-letters">Bc</h1>

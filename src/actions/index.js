@@ -3,7 +3,7 @@ export const getNews = news => ({
   news
 });
 
-export const localNews = local => ({
-  type: 'LOCAL_NEWS',
-  local
+export const addReview = review => ({
+  type: 'ADD_REVIEW',
+  review
 });
