@@ -1,31 +1,43 @@
 import React, { Component } from 'react';
 import './BackArticle.css';
+import { connect } from 'react-redux';
+import ReviewForm from '../ReviewForm/ReviewForm.js';
+import ReviewCard from '../ReviewCard/ReviewCard.js';
 
-export class BackArticle extends Component {
-	contructor() {
-		this.state = {}
+export const BackArticle = ({ reviews }) => {
+	if (reviews[0] && reviews[0].reviews) {
+		console.log(reviews[0].reviews)
 	}
-  render() {
+
+	
+  const displayReview = reviews.reviews.map(review => {
+  	return <ReviewCard
+  	  key={review.id}
+  	  review={review.review}
+  	  />
+  })
+    
   	return (
+
 			<section className="brewery_company-page">
           <section className="company_form-left">
             <h1>Company Name</h1>
             <h3>Dog Friendly</h3>
+            {displayReview}
 					</section>
 					<section className="company_form-right">
-					  <section className="company_textarea-container">
-				      <textarea className="brewery_company-textarea" rows="12" cols="75">
-					    </textarea>
-					    <div className="company_button-container">
-					      <button className="company_button-submit">Submit Review</button>
-					    </div>
-					  </section>  
+					  <ReviewForm />
 					</section>
 
 			</section>
   		)
-  }
-
+ 
 }
 
-export default BackArticle;
+
+const mapStateToProps = state => ({
+  reviews: state
+});
+
+export default connect(mapStateToProps)(BackArticle);
+

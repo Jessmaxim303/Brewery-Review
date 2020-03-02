@@ -41,11 +41,8 @@
   height: 100vh;
 }
 
-
 /*import React, { Component } from 'react';
-import './MainNewsArea.css';
-import { connect } from 'react-redux';
-
+import './Ma
 export const MainNewsArea = ({news}) => {
 	// console.log(news)
 	// console.log(news[0])

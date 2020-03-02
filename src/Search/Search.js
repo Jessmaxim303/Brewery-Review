@@ -19,11 +19,10 @@ export class SearchForm extends Component {
   }
 
   loadStateNews() {
-    fetchStateNewsApi('area', this.state.area)
+    fetchStateNewsApi(this.state.area)
     .then(data => {
       this.props.getNews(data)
     })
-    // .then(data => this.setState( data ))
   }
 
   handleChange = (e) => {
@@ -31,7 +30,6 @@ export class SearchForm extends Component {
   }
 
   loadStateName = () => {
-  	console.log(this.state.area)
   	this.props.localNews(this.state.area)
   }
 

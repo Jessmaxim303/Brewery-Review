@@ -14,14 +14,12 @@
 	width: 50%;
 	height: 100%;
 	background: #0b3c5d;
+	display: flex;
+	justify-content: center;
 }
 
 .brewery_company-textarea {
 	margin-top: 15%;
-}
-
-.company_textarea-container {
-  border-radius: 8px;
 }
 
 .company_button-container {

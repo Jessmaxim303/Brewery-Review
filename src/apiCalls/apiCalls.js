@@ -1,5 +1,6 @@
-export const fetchStateNewsApi = async () => {
-  return await fetch('https://api.openbrewerydb.org/breweries')
+export const fetchStateNewsApi = async (state) => {
+	console.log(state)
+  return await fetch(`https://api.openbrewerydb.org/breweries?by_state=${state}`)
   .then(res => {
     if(!res.ok) {
       throw Error('Failed to retrieve movies.')

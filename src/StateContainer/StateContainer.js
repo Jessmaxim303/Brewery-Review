@@ -9,7 +9,7 @@ export class StateContainer extends Component {
   render() {
 
     let stateArticles = this.props.breweries.map(article => {
-      console.log(article)
+      // console.log(article)
       return < StateArticle 
         key={article.id}
         name={article.name}
@@ -21,7 +21,7 @@ export class StateContainer extends Component {
     })
     
     return (
-      console.log('State Constainer', this.props),
+      console.log('stateArticles', this.props.breweries),
       <section className="state_section-main">
         <section className="state_section-left">
          <h1 className="state_section-letters">Bc</h1>
