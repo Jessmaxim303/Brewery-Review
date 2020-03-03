@@ -29,15 +29,11 @@ export class SearchForm extends Component {
     this.setState({ area: e.target.value });
   }
 
-  loadStateName = () => {
-  	this.props.localNews(this.state.area)
-  }
-
 	render() {
 		return(
       <form autoComplete="off" className="search_box">
         <section className="search_logo-box">
-          <h1 className="search_logo-letters">Lb</h1>
+          <h1 className="search_logo-letters">Br</h1>
         </section>
         <section className="search_form-box">
           <label for="name" className="search_input-label">Pick a state:</label>

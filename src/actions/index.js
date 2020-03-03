@@ -12,3 +12,8 @@ export const addFavorite = favorite => ({
 	type: 'ADD_FAVORITE',
 	favorite
 });
+
+export const getFavorite = favorite => ({
+	type: 'GET_FAVORITE',
+	favorite
+});
