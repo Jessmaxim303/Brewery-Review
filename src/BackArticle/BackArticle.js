@@ -18,15 +18,13 @@ export const BackArticle = ({ reviews }) => {
 
 			<section className="brewery_company-page">
           <section className="company_form-left">
-            <h1>Company Name</h1>
-            <h3>Dog Friendly</h3>
             {displayReview}
 					</section>
 					<section className="company_form-right">
 					  <ReviewForm />
 					</section>
-
 			</section>
+			
   		)
  
 }
