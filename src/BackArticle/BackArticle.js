@@ -5,9 +5,6 @@ import ReviewForm from '../ReviewForm/ReviewForm.js';
 import ReviewCard from '../ReviewCard/ReviewCard.js';
 
 export const BackArticle = ({ reviews }) => {
-	if (reviews[0] && reviews[0].reviews) {
-		console.log(reviews[0].reviews)
-	}
 
 	
   const displayReview = reviews.reviews.map(review => {
