@@ -1,0 +1,16 @@
+.welcome_component-main {
+	width: 50%;
+	background: #0b3c5d;
+	text-align: left;
+	padding-top: 20%;
+}
+
+.welcome_section {
+	font-size: 7vw;
+	color: #FAF0CA;
+}
+
+.welcome_section-p {
+	font-size: 1.5vw;
+	color: #FAF0CA;
+}

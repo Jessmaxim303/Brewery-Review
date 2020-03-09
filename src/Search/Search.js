@@ -31,26 +31,23 @@ export class SearchForm extends Component {
 
 	render() {
 		return(
-      <form autoComplete="off" className="search_box">
-        <section className="search_logo-box">
-          <h1 className="search_logo-letters">Br</h1>
-        </section>
-        <section className="search_form-box">
-          <label for="name" className="search_input-label">Pick a state:</label>
+      <section className="search_form-box">
+        <form autoComplete="off" className="search_box">
+          <label for="name" className="search_input-label"></label>
           <input
     	      type="text"
     	      className="search_input"
     	      value={this.state.area}
-    	      placeholder="Enter Your State"
+    	      placeholder="Search by Name, State, City, Zip Code"
     	      name="name"
             onChange={this.handleChange}
     	    />
-          <Link to={{ pathname: `/state` }}>
+          <Link className="search_button-link" to={{ pathname: `/state` }}>
     	        <button className="search_button" onClick={() => this.loadStateNews()}>Find!</button>
           </Link>
-        </section>
-      </form>
-			)
+        </form>
+      </section>
+		)
 	}
 
 }
