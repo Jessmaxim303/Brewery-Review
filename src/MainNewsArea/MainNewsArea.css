@@ -38,7 +38,7 @@
 .main_body-area {
   display: flex;
   flex-direction: row;
-  height: 100vh;
+  height: 64vw;
 }
 
 /*import React, { Component } from 'react';

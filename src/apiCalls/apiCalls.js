@@ -1,5 +1,6 @@
 export const fetchStateNewsApi = async (state) => {
-	console.log(state)
+	  let stateUrl = state.replace(" ","_")
+	  console.log(stateUrl)
   return await fetch(`https://api.openbrewerydb.org/breweries?by_state=${state}`)
   .then(res => {
     if(!res.ok) {
