@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import { addFavorite } from '../actions';
 import { connect } from 'react-redux';
 
-export const StateArticle = ({id, name, type, city, state, website}) => {
+export const StateArticle = ({id, name, type, city, state, website, addToFavorites, data, handleClick}) => {
+    console.log("data", data)
 	return (
     <section className="brewery_company-container">
       <article className="state_company-icon">{state.substring(0,2)}
@@ -19,13 +20,12 @@ export const StateArticle = ({id, name, type, city, state, website}) => {
           <h1 className="state_upper-subtitle">State: {state}</h1>
           <h1 className="state_upper-subtitle">City: {city}</h1>
         </section>
-        <section className="state_body-lower">
-          <a className="website_button" href={website}>Website</a>
-					<Link to={{
-              pathname: `/company`,
-            }} >
-							<button className="state_favorite-button state_button">Comment</button>
-          </Link>
+        <section className="brewery_button-container">
+          <a className="state_website-button " href={website}>Website</a>
+
+            <button className="state_button" onClick={(e) => handleClick(e)}>Review</button>
+
+          <button className="state_button" onClick={() => addToFavorites(data)}>Favorite</button>
         </section>
       </article>
     </section>

@@ -1,5 +1,5 @@
 .search_box {
-  width: 80%;
+  width: 87%;
   height: 30%;
 	margin: 12% auto;
 	display: flex;
@@ -37,7 +37,7 @@
 
 .search_input {
 	height: 40px;
-  width: 60%;
+  width: 72%;
   margin: 15px;
   font-size: 11pt;
 }
