@@ -30,12 +30,12 @@
 	background: #f5f5f5;
 }
 
-.website_button {
-	width: 90px;
+.state_website-button {
+	width: 20%;
 	height: 30px;
 	background: #f5f5f5;
 	border-radius: 8px;
-	margin: 8px;
+	margin: 8px 5px;
   text-decoration: none;
   color: black;
   display: inline-block;
@@ -54,7 +54,16 @@
 }
 
 .state_button {
-	width: 90px;
+	width: 20%;
+	height: 30px;
+	background: #f5f5f5;
+	border-radius: 8px;
+	margin: 0 5px;
+	font-size: 12pt;
+}
+
+.favorite_button {
+	width: 20%;
 	height: 30px;
 	background: #f5f5f5;
 	border-radius: 8px;
@@ -64,3 +73,17 @@
 .state_name-p {
   font-size: 2vh;
 }
+
+.brewery_button-container {
+	padding: 10px 0;
+}
+
+/*<a className="website_button" href={website}>Website</a>
+					<Link to={{
+              pathname: `/company`,
+            }} >
+							<button className="state_favorite-button state_button">Comment</button>
+          </Link>
+        </section>*/
+
+        

@@ -19,7 +19,7 @@ export class App extends Component {
     return (
       <Router>
         <div className="App">
-          < Header />
+          <Header />
             <Switch>
               <Route exact path='/' render={() => <MainNewsArea />} />
               <Route exact path='/state' render={() => <StateContainer />} />

@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import './StateContainer.css';
-import StateArticle from '../StateArticle/StateArticle.js';
 import { addFavorite, getFavorite } from '../actions';
 import { connect } from 'react-redux';
+import { FlipContainer } from '../FlipContainer/FlipContainer.js';
+import ReactCardFlip from 'react-card-flip';
 
 export class StateContainer extends Component {
   constructor() {
     super();
     this.state = {
       display: []
-    }
+    };
   }
 
   addToFavorites = (obj) => {
@@ -21,18 +22,19 @@ export class StateContainer extends Component {
   }
 
   render() {
-    let stateArticles = this.props.breweries.map(article => {
-      return <section className="brewery_component-container">
-               < StateArticle 
-                 id={article.id}
-                 name={article.name}
-                 type={article.brewery_type}
-                 city={article.city}
-                 state={article.state}
-                 website={article.website_url}
-               /> 
-              <button id={article.id} className="state_favorite-button state_button" onClick={(e) => this.addToFavorites(article)}>Favorite</button>
-             </section>
+    let flip = this.props.breweries.map(article => {
+      return (
+          <FlipContainer 
+            id={article.id}
+            name={article.name}
+            type={article.brewery_type}
+            city={article.city}
+            state={article.state}
+            website={article.website_url}
+            addToFavorites={this.addToFavorites}
+            data={article}
+            /> 
+      )
     })
     
     return (
@@ -43,7 +45,7 @@ export class StateContainer extends Component {
          <button className="state_button-favorite" onClick={(e) => this.getFavorites()}>Favorites</button>
         </section>
         <section className="state_section-right">
-          {stateArticles}
+          {flip}
         </section>
       </section>
       )
